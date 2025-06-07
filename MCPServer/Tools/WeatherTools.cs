@@ -12,7 +12,7 @@ public static class WeatherTools
     [McpServerTool, Description("Get weather alerts for a US state.")]
     public static async Task<string> GetAlerts(
         HttpClient client,
-        [Description("The US state to get alerts for.")] string state)
+        [Description("The US state to get alerts for.Be careful and just pass the state abbreviation like \"TX\" for Texas, not the full state name")] string state)
     {
         using var jsonDocument = await client.ReadJsonDocumentAsync($"/alerts/active/area/{state}");
         var jsonElement = jsonDocument.RootElement;

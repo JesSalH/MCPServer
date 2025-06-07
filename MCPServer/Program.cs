@@ -23,23 +23,23 @@ var app = builder.Build();
 var httpClient = app.Services.GetRequiredService<HttpClient>();
 
 // Test GetAlerts method
-// try
-// {
-//     Console.WriteLine("Testing WeatherTools.GetAlerts() for California...");
-//     var alertsResult = await WeatherTools.GetAlerts(httpClient, "CA");
-//     Console.WriteLine("Alerts Result:");
-//     Console.WriteLine(alertsResult);
-//     Console.WriteLine("GetAlerts test completed successfully!");
-// }
-// catch (Exception ex)
-// {
-//     Console.WriteLine($"GetAlerts test failed with error: {ex.Message}");
-//     Console.WriteLine($"Stack trace: {ex.StackTrace}");
-// }
-//
-// Console.WriteLine("\n" + new string('-', 50) + "\n");
-//
-// // Test GetForecast method (using coordinates for San Francisco)
+try
+{
+    Console.WriteLine("Testing WeatherTools.GetAlerts() for California...");
+    var alertsResult = await WeatherTools.GetAlerts(httpClient, "TX");
+    Console.WriteLine("Alerts Result:");
+    Console.WriteLine(alertsResult);
+    Console.WriteLine("GetAlerts test completed successfully!");
+}
+catch (Exception ex)
+{
+    Console.WriteLine($"GetAlerts test failed with error: {ex.Message}");
+    Console.WriteLine($"Stack trace: {ex.StackTrace}");
+}
+
+Console.WriteLine("\n" + new string('-', 50) + "\n");
+
+// Test GetForecast method (using coordinates for San Francisco)
 // try
 // {
 //     Console.WriteLine("Testing WeatherTools.GetForecast() for San Francisco (37.7749, -122.4194)...");
